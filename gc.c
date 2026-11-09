@@ -3,7 +3,7 @@
 void
 cln_free(void *ptr)
 {
-	void **p = p;
+	void **pp = ptr;
 	if (pp && *pp)
 	{
 		free(*pp);
