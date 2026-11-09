@@ -9,10 +9,9 @@ main(int argc, char *argv[])
 	/*let's try it
 	 * when we compile and check with valgrind
 	 * there should be no memory leaks*/
-	int *p = (int *)malloc(sizeof(int));
+	int *p GC_ATTR = (int *)malloc(sizeof(int));
 	*p = 67;
-	int GC_ATTR **ptr = &p;
-	printf("Value of p: %d\n", **ptr);
+	printf("Value of p: %d\n", *p);
 	/*no free*/
 	return 0;
 }

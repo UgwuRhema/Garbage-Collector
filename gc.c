@@ -1,12 +1,13 @@
 #include "gc.h"
 
 void
-cln_free(void **ptr)
+cln_free(void *ptr)
 {
-	if (ptr && *ptr)
+	void **p = p;
+	if (pp && *pp)
 	{
-		free(*ptr);
-		*ptr = NULL;/*good practice*/
+		free(*pp);
+		*pp = NULL;/*good practice*/
 	}
 	return;
 }
